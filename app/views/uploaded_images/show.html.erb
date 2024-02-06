@@ -1,0 +1,8 @@
+<p id="notice" class="text-success"><%= notice %></p>
+
+<p>
+  <h2>Compressed image:</h2><br>
+  <%= image_tag(@uploaded_image.image.url) %>
+</p>
+
+<%= link_to 'Back', root_path %>
