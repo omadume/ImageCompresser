@@ -30,13 +30,15 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 # Others
 gem 'carrierwave-imageoptimizer', require: ['carrierwave', 'carrierwave-imageoptimizer', 'carrierwave/orm/activerecord']
-gem 'pry', :require => 'pry'
 gem 'bootstrap', '~> 5.0'
 
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry', :require => 'pry' # for additional debugging support
+  gem 'pry-byebug', :require => 'pry-byebug'
+  gem 'rspec-rails', ">= 3.9.0" # for testing
 end
 
 group :development do
