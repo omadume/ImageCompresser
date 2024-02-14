@@ -29,15 +29,15 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 # Others
-gem 'carrierwave-imageoptimizer', require: ['carrierwave', 'carrierwave-imageoptimizer', 'carrierwave/orm/activerecord']
+gem 'carrierwave-imageoptimizer', :require => 'carrierwave'
 gem 'bootstrap', '~> 5.0'
 
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'pry', :require => 'pry' # for additional debugging support
-  gem 'pry-byebug', :require => 'pry-byebug'
+  gem 'pry' # for additional debugging support
+  gem 'pry-byebug' # may need to add require 'pry-byebug' explicitly in files when debugging
   gem 'rspec-rails', ">= 3.9.0" # for testing
 end
 

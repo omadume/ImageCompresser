@@ -1,6 +1,5 @@
 # Does not work from within config/initializers folder - seems to have some race conditions with rails app initializer
 require 'rails_helper'
-require 'carrierwave.rb'
 
 # Set storage type to local file system and disable file processing when in test environment
 if Rails.env.test? or Rails.env.cucumber?

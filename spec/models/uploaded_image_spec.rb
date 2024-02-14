@@ -16,5 +16,6 @@ RSpec.describe UploadedImage, :type => :model do
 
   it "is not valid without a compression value" do
     uploadedImage = UploadedImage.new(image: imageFile)
+    expect(uploadedImage).to_not be_valid
   end
 end

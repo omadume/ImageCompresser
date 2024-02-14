@@ -1,3 +1,5 @@
+require 'carrierwave-imageoptimizer'
+
 class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::ImageOptimizer
 
