@@ -32,7 +32,7 @@ rescue ActiveRecord::PendingMigrationError => e
 end
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  config.fixture_path = "#{Rails.root}/spec/fixtures"
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
@@ -40,10 +40,12 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = true
 
   # Remove test upload files after each test
+  # On Windows, the test files go to - "#{Rails.root}/public/uploads/tmp"
+  # On Mac, the test files go to - "#{Rails.root}/uploads"
   config.after(:each) do
     if Rails.env.test? || Rails.env.cucumber?
       FileUtils.rm_rf(Dir["#{Rails.root}/uploads"])
-    end 
+    end
   end
 
   # You can uncomment this line to turn off ActiveRecord support entirely.
